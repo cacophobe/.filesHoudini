@@ -1,0 +1,14 @@
+BackgroundColor:			0.15 0.15 0.15 			# background color 
+BackgroundBottomColor:		@BackgroundColor		# background at the bottom of viewport
+GridColor:					0.00 0.00 0.00			# reference plane
+GridLineAlpha:				ALPHA 0.30				# alpha of ref plane grid lines
+GridLineFadedAlpha:			ALPHA 0.20				# alpha of faded ref plane grid lines
+OrthoGridColor:				0.00 0.00 0.00			# ortho viewport grid lines
+CplaneColor:				0.50 0.25 0.00			# non-selected construction plane
+ActiveCplaneColor:			0.60 0.30 0.00			# non-selected active construction plane
+SelectedCplaneColor:		0.70 0.35 0.00			# selected construction plane
+CplaneAlpha:				@GridLineAlpha			# amount of shading between grid lines
+CplaneLineAlpha:			@GridLineAlpha			# alpha of cplane grid lines
+CplaneLineFadedAlpha:		@GridLineFadedAlpha		# alpha of faded cplane grid lines
+WireframeColor:				0.50 0.50 0.50			# non-selected primitives
+WireOverColor:				0.20 0.20 0.20			# color of wires in Wire Shaded modes
