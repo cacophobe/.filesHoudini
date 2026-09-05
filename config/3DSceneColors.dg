@@ -1,3 +1,5 @@
+# https://github.com/cacophobe/.filesHoudini/blob/main/config/3DSceneColors.dg
+
 BackgroundColor:			0.15 0.15 0.15 			# background color 
 BackgroundBottomColor:		@BackgroundColor		# background at the bottom of viewport
 GridColor:					0.00 0.00 0.00			# reference plane
