@@ -1,3 +1,3 @@
-# Houdini Dotfiles
+# .files Houdini
 
-My personal Houdini Preference files mirroring the hierarchical structure of $HOUDINI_USER_PREF_DIR
+Various Houdini Preference files from my $HOUDINI_USER_PREF_DIR
