@@ -1,0 +1,8 @@
+{	"load_package_once": true,
+    "env": [
+			{"RSRC": "$HOME/../Downloads/_Rsrc"}, 
+			{"HOUDINI_DESKTOP_DIR": "$HOME/_Houdini"}, 
+			{"HOUDINI_EXTERNAL_HELP_BROWSER": 1}, 
+			{"KARMA_XPU_DISABLE_EMBREE_DEVICE": 1}
+		]
+}
