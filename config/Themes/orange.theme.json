@@ -24,7 +24,7 @@
         "fieldAdjust": -14.0,
         "paneDividerAdjust": 5.0,
         "secondaryChromaScale": 0.2,
-        "category": "Functional",
-        "description": "https://github.com/cacophobe/HoudiniDotFiles"
+        "category": "Accessible",
+        "description": "https://github.com/cacophobe/HoudiniDotfiles/blob/main/config/Themes/orange.theme.json"
     }
 }
