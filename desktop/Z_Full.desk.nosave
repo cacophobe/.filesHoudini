@@ -1,0 +1,112 @@
+fullscreen   -1
+playbarshown 1
+animbarshown 0
+playbar      2
+shelf        0
+menubar      2
+statusbar    2
+radial menu set main
+root {
+    split 0.39 H {
+        split 0.65 V {
+            tabs 1 1 {
+                pane panetab6 -a 0 -l 10 -H /obj/ -T OBJ -m details
+                pane pane1 -a 0 -l 10 -H /out/ -T ROP -m renderview
+            }
+            tabs 0 1 {
+                pane panetab2 -a 0 -l 10 -H /obj/ -T OBJ -m sceneview
+            }
+        }
+        split 0.46 V {
+            split 0.429949 H {
+                tabs 0 1 {
+                    pane panetab1 -a 0 -l 10 -H /obj/ -T OBJ -m parmeditor
+                }
+                tabs 0 1 {
+                    pane panetab4 -a 0 -l 0 -H /obj/ -T OBJ -m neteditor
+                }
+            }
+            split 0.43 H {
+                tabs 0 1 {
+                    pane panetab3 -a 0 -l 0 -H /mat/ -T VOP -m neteditor
+                    pane panetab7 -a 0 -l 0 -H /stage/ -T LOP -m parmeditor
+                }
+                tabs 0 1 {
+                    pane panetab5 -a 0 -l 0 -H /stage/ -T LOP -m neteditor
+                    pane panetab8 -a 0 -l 0 -H /mat/ -T VOP -m parmeditor
+                }
+            }
+        }
+    }
+}
+shelfdock -o 0 -l small_icon_and_text -G 0.50 add everyday
+geospreadsheet -c 0 -l horizontal -s 0.5 -m none -f 1 panetab6
+scenegraphtree -S 0.25 -m 2 -p "/collections /lights" -c  -i  -o  -x 1 -s 1 -M 0 -C primtype,childcount,kind,populated,loaded,activation,visibility,solo,selectability  panetab6
+ropview -c 0 pane1
+viewerstow -x open -b stow -l open -m hide -c hide -d open ${DESKNAME}.panetab2.world
+vieweroption -a 2 ${DESKNAME}.panetab2.world
+viewlayout -s 2 ${DESKNAME}.panetab2.world
+viewtype -t ortho_right ${DESKNAME}.panetab2.world.`vpname("${DESKNAME}.panetab2.world",4)`
+viewtype -t ortho_front ${DESKNAME}.panetab2.world.`vpname("${DESKNAME}.panetab2.world",3)`
+viewtype -t ortho_top ${DESKNAME}.panetab2.world.`vpname("${DESKNAME}.panetab2.world",1)`
+viewtype -t perspective ${DESKNAME}.panetab2.world.`vpname("${DESKNAME}.panetab2.world",2)`
+parmeditor -T 0.25 -w 0 panetab1
+networkeditor -p '{\n	"backgroundimagebrightness":"1.0",\n	"gridmode":"0",\n	"showcopsmenu":"1",\n	"taskgraphcollapsemode":"Off",\n	"showtasksmenu":"1",\n	"useworkitemcolorattribute":"0",\n	"typesidebarsplit":"0.25",\n	"showmenu":"0",\n	"gridxstep":"2.0",\n	"treesplit":"0.25",\n	"showparmdialogmax":"1",\n	"perfstatname":"Time",\n	"palettemode":"0",\n	"taskgraphsortdirection":"0",\n	"showchilddep":"1",\n	"backgroundimageediting":"0",\n	"showtaskgraphperf":"0",\n	"showgrouplist":"0",\n	"showperfstats":"1",\n	"showparmdialog":"0",\n	"overviewmode":"2",\n	"showdep":"0",\n	"palettecolors":"",\n	"showspareinputdep":"1",\n	"workitemcolorattribute":"",\n	"palettesize":"150 150",\n	"showtypesidebar":"0",\n	"showtree":"0",\n	"overviewbounds":"0.000000 0.000000 263.700000 149.400000",\n	"taskgraphperfstatname":"Cook Time",\n	"gridystep":"1.0",\n	"taskgraphsortcriteria":"Automatic",\n	"workitemattrtocollapseby":"",\n	"grouplistsplit":"0.75"\n}\n' panetab4
+netcolumns -c display,xray,select,origin,capture,bone -n OBJ panetab4
+netcolumns -c display,render,template,selectabletemplate,highlight,unload,bypass,lock -n SOP panetab4
+netcolumns -c delscript,comment -n CHOPNET panetab4
+netcolumns -c display,export,audio,bypass,lock -n CHOP panetab4
+netcolumns -c startrender,bypass,lock -n ROP panetab4
+netcolumns -c delscript,comment -n SHOP panetab4
+netcolumns -c display,render,template,bypass -n COP2 panetab4
+netcolumns -c delscript,comment -n IMG panetab4
+netcolumns -c delscript,comment,input -n VOP panetab4
+netcolumns -c delscript,comment -n VOPNET panetab4
+netcolumns -c delscript,comment -n DOP panetab4
+netcolumns -c delscript,comment -n TOP panetab4
+netcolumns -c delscript,comment -n TOPNET panetab4
+netcolumns -c display,bypass,delscript,comment,input -n LOP panetab4
+netcolumns -c display,export,template,selectabletemplate,bypass -n COP panetab4
+netcolumns -c delscript,comment -n MGR panetab4
+netcolumns -c delscript,comment -n DIR panetab4
+netcolumns -c delscript,comment -n DATA panetab4
+networkeditor -p '{\n	"backgroundimagebrightness":"1.0",\n	"gridmode":"0",\n	"showcopsmenu":"1",\n	"taskgraphcollapsemode":"Off",\n	"showtasksmenu":"1",\n	"useworkitemcolorattribute":"0",\n	"typesidebarsplit":"0.25",\n	"showmenu":"0",\n	"gridxstep":"2.0",\n	"treesplit":"0.25",\n	"showparmdialogmax":"1",\n	"perfstatname":"Time",\n	"palettemode":"0",\n	"taskgraphsortdirection":"0",\n	"showchilddep":"1",\n	"backgroundimageediting":"0",\n	"showtaskgraphperf":"0",\n	"showgrouplist":"0",\n	"showperfstats":"1",\n	"showparmdialog":"0",\n	"overviewmode":"2",\n	"showdep":"0",\n	"palettecolors":"",\n	"showspareinputdep":"1",\n	"workitemcolorattribute":"",\n	"palettesize":"150 150",\n	"showtypesidebar":"0",\n	"showtree":"0",\n	"overviewbounds":"0.000000 0.000000 200.100000 125.700000",\n	"taskgraphperfstatname":"Cook Time",\n	"gridystep":"1.0",\n	"taskgraphsortcriteria":"Automatic",\n	"workitemattrtocollapseby":"",\n	"grouplistsplit":"0.75"\n}\n' panetab3
+netcolumns -c display,xray,select,origin,capture,bone -n OBJ panetab3
+netcolumns -c display,render,template,selectabletemplate,highlight,unload,bypass,lock -n SOP panetab3
+netcolumns -c delscript,comment -n CHOPNET panetab3
+netcolumns -c display,export,audio,bypass,lock -n CHOP panetab3
+netcolumns -c startrender,bypass,lock -n ROP panetab3
+netcolumns -c delscript,comment -n SHOP panetab3
+netcolumns -c display,render,template,bypass -n COP2 panetab3
+netcolumns -c delscript,comment -n IMG panetab3
+netcolumns -c delscript,comment,input -n VOP panetab3
+netcolumns -c delscript,comment -n VOPNET panetab3
+netcolumns -c delscript,comment -n DOP panetab3
+netcolumns -c delscript,comment -n TOP panetab3
+netcolumns -c delscript,comment -n TOPNET panetab3
+netcolumns -c display,bypass,delscript,comment,input -n LOP panetab3
+netcolumns -c display,export,template,selectabletemplate,bypass -n COP panetab3
+netcolumns -c delscript,comment -n MGR panetab3
+netcolumns -c delscript,comment -n DIR panetab3
+netcolumns -c delscript,comment -n DATA panetab3
+parmeditor -T 0.25 -w 0 panetab7
+networkeditor -p '{\n	"backgroundimagebrightness":"1.0",\n	"gridmode":"0",\n	"showcopsmenu":"1",\n	"taskgraphcollapsemode":"Off",\n	"showtasksmenu":"1",\n	"useworkitemcolorattribute":"0",\n	"typesidebarsplit":"0.25",\n	"showmenu":"0",\n	"gridxstep":"2.0",\n	"treesplit":"0.25",\n	"showparmdialogmax":"1",\n	"perfstatname":"Time",\n	"palettemode":"0",\n	"taskgraphsortdirection":"0",\n	"showchilddep":"1",\n	"backgroundimageediting":"0",\n	"showtaskgraphperf":"0",\n	"showgrouplist":"0",\n	"showperfstats":"1",\n	"showparmdialog":"0",\n	"overviewmode":"2",\n	"showdep":"0",\n	"palettecolors":"",\n	"showspareinputdep":"1",\n	"workitemcolorattribute":"",\n	"palettesize":"150 150",\n	"showtypesidebar":"0",\n	"showtree":"0",\n	"overviewbounds":"0.000000 0.000000 263.700000 125.700000",\n	"taskgraphperfstatname":"Cook Time",\n	"gridystep":"1.0",\n	"taskgraphsortcriteria":"Automatic",\n	"workitemattrtocollapseby":"",\n	"grouplistsplit":"0.75"\n}\n' panetab5
+netcolumns -c display,xray,select,origin,capture,bone -n OBJ panetab5
+netcolumns -c display,render,template,selectabletemplate,highlight,unload,bypass,lock -n SOP panetab5
+netcolumns -c delscript,comment -n CHOPNET panetab5
+netcolumns -c display,export,audio,bypass,lock -n CHOP panetab5
+netcolumns -c startrender,bypass,lock -n ROP panetab5
+netcolumns -c delscript,comment -n SHOP panetab5
+netcolumns -c display,render,template,bypass -n COP2 panetab5
+netcolumns -c delscript,comment -n IMG panetab5
+netcolumns -c delscript,comment,input -n VOP panetab5
+netcolumns -c delscript,comment -n VOPNET panetab5
+netcolumns -c delscript,comment -n DOP panetab5
+netcolumns -c delscript,comment -n TOP panetab5
+netcolumns -c delscript,comment -n TOPNET panetab5
+netcolumns -c display,bypass,delscript,comment,input -n LOP panetab5
+netcolumns -c display,export,template,selectabletemplate,bypass -n COP panetab5
+netcolumns -c delscript,comment -n MGR panetab5
+netcolumns -c delscript,comment -n DIR panetab5
+netcolumns -c delscript,comment -n DATA panetab5
+parmeditor -T 0.25 -w 0 panetab8
