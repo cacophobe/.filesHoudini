@@ -9,15 +9,15 @@
         "primary": [
             240.0,
             12.5,
-            28.57
+            60.51
         ],
         "highlight": [
             60.0,
             100.0,
-            50.0
+            75.0
         ],
+        "uncheckedUseField": true,
         "checkedUsePrimary": true,
-        "checkedInverted": true,
         "tabsUsePrimary": true,
         "iconsUsePrimary": false,
         "buttonAdjust": -5.0,
@@ -25,6 +25,6 @@
         "paneDividerAdjust": 5.0,
         "secondaryChromaScale": 0.2,
         "category": "Accessible",
-        "description": "https://github.com/cacophobe/HoudiniDotfiles/blob/main/config/Themes/orange.theme.json"
+        "description": "https://github.com/cacophobe/.filesHoudini/blob/main/config/Themes/orange.theme.json"
     }
 }
